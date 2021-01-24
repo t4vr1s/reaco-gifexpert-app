@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { AddCategory } from './components/AddCategory';
-import GifGrid from './components/GifGrid';
+import React, { useState } from 'react'
+import { AddCategory } from './components/AddCategory'
+import GifGrid from './components/GifGrid'
 
-const GifExpertApp = () => {
-  const [categories, setCategories] = useState(['One Punch']);
+const GifExpertApp = ({ defaultCategories = [] }) => {
+  const [categories, setCategories] = useState(defaultCategories)
   return (
     <>
       <h2>GifExpertApp</h2>
@@ -15,7 +15,7 @@ const GifExpertApp = () => {
         ))}
       </ol>
     </>
-  );
-};
+  )
+}
 
-export default GifExpertApp;
+export default GifExpertApp
